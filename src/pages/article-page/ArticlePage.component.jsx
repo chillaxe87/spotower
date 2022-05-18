@@ -16,7 +16,7 @@ const ArticlePage = () => {
 
 
     return (
-        <div className="container arcticle">
+        <div className="container-arcticle">
             <h1>{info.title}</h1>
             <h2>{info.content}</h2>
         </div>

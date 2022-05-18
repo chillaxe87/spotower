@@ -9,8 +9,11 @@ const Header = () => {
     const [articles, setArticles] = useState(Articles)
     const [categories, setCategories] = useState(Categories)
     const [articlesInCategory, setArticlesInCategory] = useState([])
+    const [showMenu, setShowMenu] = useState(false)
 
-
+    const onClickShowMenu = () => {
+        setShowMenu(!showMenu)
+    }
 
     useEffect(() => {
         if (articlesInCategory.length > 0) return
@@ -32,14 +35,20 @@ const Header = () => {
 
     return (
         <div className='header'>
-            <div className='header-menu'>
-                <div className='category-container'>
-                    {articlesInCategory.map((data) => (
-                        <ArticleCategory key={nanoid()} data={data} />
-                    ))}
-                </div>
+            <button className="hamburger-btn" onClick={onClickShowMenu}>
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar-short"></div>
+            </button>
+            {showMenu &&
+                <div className='header-menu'>
+                    <div className='category-container'>
+                        {articlesInCategory.map((data) => (
+                            <ArticleCategory key={nanoid()} data={data} />
+                        ))}
+                    </div>
+                </div>}
 
-            </div>
 
         </div>
     )

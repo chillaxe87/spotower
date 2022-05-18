@@ -1,6 +1,16 @@
 @use '../../styles.scss';
 
-arcticle{
+.container-arcticle{
     width: 90%;
     margin: auto;
+    margin-bottom: 3rem;
+
+    h1{
+        font-size: 18px;
+        font-weight: 700;
+    }
+    h2{
+        font-size: 14px;
+        font-weight: 500;
+    }
 }
