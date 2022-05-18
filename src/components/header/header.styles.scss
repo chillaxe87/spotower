@@ -1,0 +1,53 @@
+@use '../../styles.scss';
+
+
+.header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 25vh;
+    // background-color: #0099CC;
+    padding-bottom: 2rem;
+
+
+
+
+    .header-menu{
+        width: 350px;
+        // min-height: 200px;
+        border-radius: 20px;
+        box-shadow: 1px 1px 1px 1px #888888;
+    }
+    .category-container{
+        border-radius: 20px;
+        background-color: white;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        min-height: 50px;
+        width: 100%;
+        border-bottom: solid 2px #ccc ;
+    }
+    
+    .header-titles{
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+        color: white;
+        h1{
+            margin: 0;
+            margin-bottom: 1rem;
+            font-size: 20px;
+        }
+        h2{
+            margin: 0;
+            font-size: 12px;
+        }
+    }
+   
+
+}

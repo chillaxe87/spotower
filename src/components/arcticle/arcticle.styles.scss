@@ -1,0 +1,16 @@
+@use '../../styles.scss';
+
+.arcticle-container{
+    width: 90%;
+    margin: auto;
+    margin-top: 2rem;  
+    color: rgb(48, 48, 88);
+
+    h1{
+        font-size: 20px;
+    }
+
+    h2{
+        font-size: 12px;
+    }
+}
