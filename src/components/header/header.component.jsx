@@ -1,55 +1,41 @@
 import React, { useEffect, useState } from 'react'
-import { Articles, Categories } from '../../data/articlesData';
-import { nanoid } from 'nanoid';
 import "./header.styles.scss";
-import ArticleCategory from '../arcitcle-category/arcitcle-category.component';
+
 
 const Header = () => {
 
-    const [articles, setArticles] = useState(Articles)
-    const [categories, setCategories] = useState(Categories)
-    const [articlesInCategory, setArticlesInCategory] = useState([])
-    const [showMenu, setShowMenu] = useState(false)
-
-    const onClickShowMenu = () => {
-        setShowMenu(!showMenu)
-    }
-
-    useEffect(() => {
-        if (articlesInCategory.length > 0) return
-        const arcticles = [];
-        categories.forEach(category => {
-            let arctileList = [];
-            articles.forEach(arcticle => {
-                if (arcticle.category === category) arctileList.push(arcticle.title)
-            })
-            arcticles.push({
-                category: category,
-                articles: arctileList,
-            })
-        })
-        setArticlesInCategory(arcticles)
-        console.log(articlesInCategory)
-    }, [])
 
 
     return (
-        <div className='header'>
-            <button className="hamburger-btn" onClick={onClickShowMenu}>
-                <div className="bar"></div>
-                <div className="bar"></div>
-                <div className="bar-short"></div>
-            </button>
-            {showMenu &&
-                <div className='header-menu'>
-                    <div className='category-container'>
-                        {articlesInCategory.map((data) => (
-                            <ArticleCategory key={nanoid()} data={data} />
-                        ))}
-                    </div>
-                </div>}
-
-
+        <div>
+            <div className='header-upper'>
+                <div className='header-titles'>
+                    <h1>10 Besy New York insurance rates</h1>
+                    <h2>Find & compare your best rates in 2 minutes</h2>
+                </div>
+                <div className='header-search'>
+                    <p>Enter Zip code</p>
+                </div>
+                <div className='header-search-button'>
+                    <p> Get Your Questes</p>
+                </div>
+            </div>
+            <div className='header'>
+                <div>
+                    <h1>Services</h1>
+                </div>
+                <div>
+                    <h1>Company</h1>
+                    <h2>Some data</h2>
+                    <h2>Some data</h2>
+                    <h2>Some data</h2>
+                </div>
+                <div>
+                    <h1>Legal</h1>
+                    <h2>Privacy Policy</h2>
+                    <h2>Terms</h2>
+                </div>
+            </div>
         </div>
     )
 }

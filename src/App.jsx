@@ -9,10 +9,10 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <Routes>
+      {/* <Routes>
         <Route path="" element={<HomePage />}></Route>
         <Route path=":id" element={<ArticlePage />}></Route >
-      </Routes>
+      </Routes> */}
       <Footer />
     </BrowserRouter>
   );
